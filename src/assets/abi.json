@@ -1,0 +1,204 @@
+[
+  {
+    "inputs": [
+      { "internalType": "string", "name": "", "type": "string" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "getFinanceData",
+    "outputs": [
+      { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+      { "internalType": "string", "name": "typeOf", "type": "string" },
+      { "internalType": "uint256", "name": "amount", "type": "uint256" },
+      { "internalType": "string", "name": "comment", "type": "string" },
+      { "internalType": "bool", "name": "creditOrDebit", "type": "bool" },
+      { "internalType": "uint256", "name": "creationTime", "type": "uint256" },
+      { "internalType": "uint256", "name": "updateTime", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "", "type": "string" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "getHealthData",
+    "outputs": [
+      { "internalType": "string", "name": "animal", "type": "string" },
+      { "internalType": "string", "name": "issue", "type": "string" },
+      { "internalType": "string", "name": "treatment", "type": "string" },
+      { "internalType": "uint256", "name": "issueData", "type": "uint256" },
+      { "internalType": "string", "name": "status", "type": "string" },
+      { "internalType": "uint256", "name": "createdAt", "type": "uint256" },
+      { "internalType": "uint256", "name": "modifiedAt", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "user", "type": "string" },
+      { "internalType": "uint256", "name": "index", "type": "uint256" }
+    ],
+    "name": "getIndexDataOfFinance",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+          { "internalType": "string", "name": "typeOf", "type": "string" },
+          { "internalType": "uint256", "name": "amount", "type": "uint256" },
+          { "internalType": "string", "name": "comment", "type": "string" },
+          { "internalType": "bool", "name": "creditOrDebit", "type": "bool" },
+          {
+            "internalType": "uint256",
+            "name": "creationTime",
+            "type": "uint256"
+          },
+          { "internalType": "uint256", "name": "updateTime", "type": "uint256" }
+        ],
+        "internalType": "struct storeData.finanacedata",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "user", "type": "string" },
+      { "internalType": "uint256", "name": "index", "type": "uint256" }
+    ],
+    "name": "getIndexDataOfHealth",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "string", "name": "animal", "type": "string" },
+          { "internalType": "string", "name": "issue", "type": "string" },
+          { "internalType": "string", "name": "treatment", "type": "string" },
+          { "internalType": "uint256", "name": "issueData", "type": "uint256" },
+          { "internalType": "string", "name": "status", "type": "string" },
+          { "internalType": "uint256", "name": "createdAt", "type": "uint256" },
+          { "internalType": "uint256", "name": "modifiedAt", "type": "uint256" }
+        ],
+        "internalType": "struct storeData.healthIssue",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "string", "name": "user", "type": "string" }],
+    "name": "getTotalDataOfFinance",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+          { "internalType": "string", "name": "typeOf", "type": "string" },
+          { "internalType": "uint256", "name": "amount", "type": "uint256" },
+          { "internalType": "string", "name": "comment", "type": "string" },
+          { "internalType": "bool", "name": "creditOrDebit", "type": "bool" },
+          {
+            "internalType": "uint256",
+            "name": "creationTime",
+            "type": "uint256"
+          },
+          { "internalType": "uint256", "name": "updateTime", "type": "uint256" }
+        ],
+        "internalType": "struct storeData.finanacedata[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "string", "name": "user", "type": "string" }],
+    "name": "getTotalDataofHealth",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "string", "name": "animal", "type": "string" },
+          { "internalType": "string", "name": "issue", "type": "string" },
+          { "internalType": "string", "name": "treatment", "type": "string" },
+          { "internalType": "uint256", "name": "issueData", "type": "uint256" },
+          { "internalType": "string", "name": "status", "type": "string" },
+          { "internalType": "uint256", "name": "createdAt", "type": "uint256" },
+          { "internalType": "uint256", "name": "modifiedAt", "type": "uint256" }
+        ],
+        "internalType": "struct storeData.healthIssue[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "string", "name": "user", "type": "string" }],
+    "name": "getTotalLengthOfFinanceData",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "string", "name": "user", "type": "string" }],
+    "name": "getTotalLengthOfHealthData",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "user", "type": "string" },
+      {
+        "components": [
+          { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+          { "internalType": "string", "name": "typeOf", "type": "string" },
+          { "internalType": "uint256", "name": "amount", "type": "uint256" },
+          { "internalType": "string", "name": "comment", "type": "string" },
+          { "internalType": "bool", "name": "creditOrDebit", "type": "bool" },
+          {
+            "internalType": "uint256",
+            "name": "creationTime",
+            "type": "uint256"
+          },
+          { "internalType": "uint256", "name": "updateTime", "type": "uint256" }
+        ],
+        "internalType": "struct storeData.finanacedata",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "name": "insertFinanceData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "user", "type": "string" },
+      {
+        "components": [
+          { "internalType": "string", "name": "animal", "type": "string" },
+          { "internalType": "string", "name": "issue", "type": "string" },
+          { "internalType": "string", "name": "treatment", "type": "string" },
+          { "internalType": "uint256", "name": "issueData", "type": "uint256" },
+          { "internalType": "string", "name": "status", "type": "string" },
+          { "internalType": "uint256", "name": "createdAt", "type": "uint256" },
+          { "internalType": "uint256", "name": "modifiedAt", "type": "uint256" }
+        ],
+        "internalType": "struct storeData.healthIssue",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "name": "insertHealthData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
